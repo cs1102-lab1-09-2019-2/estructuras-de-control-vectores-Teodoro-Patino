@@ -1,10 +1,10 @@
 # Ejercicios Estructuras de Control
 
 Nombre:
---
+--Teodoro Martin Patiño Chiri
 
 Github Username:
---
+--Teodoro-Patino
 
 Instrucciones:
 --

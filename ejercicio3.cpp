@@ -1,9 +1,18 @@
-
 int mediana(vector<int> &lista);
 vector<int> leerConsola();
 
 vector<int> leerConsola() {
     //Ingrese un numero positivo, escriba -1 si ya no quiere ingresar mas numeros:
+    vector<int> elementos;
+    int numero;
+    do {
+        cout << "Ingrese un entero positivo, escriba -1 si ya no quiere ingresar mas numeros:";
+        cin >> numero;
+        elementos.insert(elementos.end(), x);
+
+    } while (x != -1);
+    return elementos;
+}
 }
 
 int mediana(vector<int> &lista) {
@@ -19,6 +28,15 @@ int mediana(vector<int> &lista) {
      Por ejemplo, en la muestra 3, 9, 11, 15, 16, la mediana es 11
      v[4/2] = v[2] = 11
      */
+    int null,a,b;
+    if(lista.size()%2==0){
+        a=lista[lista.size()/2];
+        b=lista[(lista.size()/2)-1];
+        null=(a+b)/2;
+    }
+    else{
+        null=lista[(lista.size()-1)/2]
+    }
     return null;
 }
 

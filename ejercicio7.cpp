@@ -1,23 +1,23 @@
 /*
- El usuario puede escoger de 5 opciones (de 1 a 5). Entonces pregunta por dos
- valores enteros para el calculo
+El usuario puede escoger de 5 opciones (de 1 a 5). Entonces pregunta por dos
+valores enteros para el calculo
 
- MENU:
- 1.- suma
- 2.- resta
- 3.- multiplicar
- 4.- dividir
- 5.- modulo
+MENU:
+1.- suma
+2.- resta
+3.- multiplicar
+4.- dividir
+5.- modulo
 
- Ingresa una opcion: 1
- Ingresa los dos numeros: 5 96
- Resultado: 111
+Ingresa una opcion: 1
+Ingresa los dos numeros: 5 96
+Resultado: 111
 
- Continuar? y
+Continuar? y
 
- // Si el usuario ingresa 'y' a la pregunta Continuar? el usuario puede escoger otra opcion.
+// Si el usuario ingresa 'y' a la pregunta Continuar? el usuario puede escoger otra opcion.
 
- */
+*/
 
 #include <iostream>
 #include <stdexcept> //Validar en la division por 0
@@ -45,5 +45,42 @@ void mostrarMenu() {
 }
 
 int main() {
+    char eleccion;
+    int a,b;
+    double resultado;
+    while (true){
+        mostrarMenu();
+        cin>>eleccion;
+        cin>>a>>b;
+        switch (eleccion){
+            case '1':
+                resultado=a+b;
+                cout<<resultado;
+                break;
+            case '2':
+                resultado=a-b;
+                cout<<resultado;
+                break;
+            case '3':
+                resultado=a*b;
+                cout<<resultado;
+                break;
+            case '4':
+                resultado=a/b;
+                cout<<resultado;
+                break;
+            case '5':
+                resultado=a%b;
+                cout<<resultado;
+                break;
+        }
+        cout<<'\n';
+        cout<<"Continuar? y";
+        cin>>eleccion;
+        if (eleccion!='y'){
+            break;
+        }
+    }
     return 0;
 }
+
