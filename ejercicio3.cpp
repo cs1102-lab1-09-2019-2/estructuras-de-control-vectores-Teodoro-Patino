@@ -1,3 +1,6 @@
+#include <vector>
+#include <iostream>
+using namespace std;
 int mediana(vector<int> &lista);
 vector<int> leerConsola();
 
@@ -8,11 +11,10 @@ vector<int> leerConsola() {
     do {
         cout << "Ingrese un entero positivo, escriba -1 si ya no quiere ingresar mas numeros:";
         cin >> numero;
-        elementos.insert(elementos.end(), x);
+        elementos.insert(elementos.end(), numero);
 
-    } while (x != -1);
+    } while (numero != -1);
     return elementos;
-}
 }
 
 int mediana(vector<int> &lista) {
@@ -35,7 +37,7 @@ int mediana(vector<int> &lista) {
         null=(a+b)/2;
     }
     else{
-        null=lista[(lista.size()-1)/2]
+        null=lista[(lista.size()-1)/2];
     }
     return null;
 }

@@ -10,17 +10,25 @@ Escribir un programa que imprima lo siguiente:
 
 */
 
-#include <iostream>
-using std::cout;
+#include<iostream>
+using namespace std;
 
-int main() {
-    cout<<"12*****";
-    cout<<"123****";
-    cout<<"1234***";
-    cout<<"12345**";
-    cout<<"123456*";
-    cout<<"1234567";
+int main()
+{
+    int x,y;
+    for(x=1;x<=7;x++)
+    {
+        for(y=1;y<=x;y++)
+        {
+            cout<<y;
+        }
+        for(;y<=7;y++)
+        {
+            cout<<"*";
+        }
+
+        cout<<endl;
+    }
 
 
-    return 0;
 }
